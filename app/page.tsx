@@ -4,6 +4,7 @@ import { BiCrown } from "react-icons/bi";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { RiLeafLine } from "react-icons/ri";
 import NavBar from "./components/NavBar";
+import landing from './assets/landing.png'
 
 export default function Home() {
   return (
@@ -23,12 +24,12 @@ export default function Home() {
                 <br className="remove--tablet" />
                 individuals who barely have time to read,
                 <br className="remove--tablet" />
-                and even people who don’t like to read.
+                and even people who dongit’t like to read.
               </div>
               <button className="btn home__cta--btn">Login</button>
             </div>
             <figure className="landing__image--mask">
-              <img src="" alt="landing" />
+              <Image src={landing} alt="landing" />
             </figure>
           </div>
         </div>
