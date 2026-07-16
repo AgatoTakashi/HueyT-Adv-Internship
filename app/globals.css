@@ -738,3 +738,84 @@ button:disabled {
 .auth__close--btn:hover {
   color: #032b41;
 }
+
+.sidebar {
+  background: #f7faf9;
+  width: 200px;
+}
+
+.logo__wrapper {
+  width: 160px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.sidebar__wrapper {
+  padding: 8px
+}
+
+.sidebar__middle {
+  margin-top: 40px;
+}
+
+.sidebar__middle svg, .sidebar__bottom svg {
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+}
+
+.sidebar__middle--link, .sidebar__bottom-link, .sidebar__bottom-link li {
+  height: 56px;
+  margin: 4px;
+}
+
+.sidebar__middle--link:active {
+  text-decoration: underline;
+}
+
+.sidebar__bottom {
+  margin-bottom: 20px;
+}
+
+.top__container {
+  height: 80px;
+  border-bottom: 1px solid #e1e7ea
+}
+
+.search__wrapper {
+  max-width: 1070px;
+  padding: 16px;
+}
+
+.input__container {
+  max-width: 340px;
+}
+
+.input__wrapper {
+  height: 40px;
+  width: 100%;
+  padding: 0 16px;
+  outline: none;
+  background-color: #f1f6f4;
+  color: #042330;
+  border: 2px solid #e1e7ea;
+  border-radius: 8px;
+}
+
+.input__wrapper input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.search__icon-wrapper {
+  height: 100%;
+  border-left: 2px solid #e1e7ea; 
+}
+
+.search__icon-wrapper svg {
+   transform: translate(25%, 25%);
+   width: 24px;
+   height: 24px;
+}

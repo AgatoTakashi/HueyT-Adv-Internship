@@ -1,3 +1,5 @@
+"use client" //fix me
+
 import { useState } from "react";
 import { BsStarFill } from "react-icons/bs";
 import AuthModal from "./AuthModal";

@@ -1,3 +1,5 @@
+"use client"  //fix me
+
 import Image from "next/image";
 import landing from '../assets/landing.png'
 import AuthModal from "./AuthModal";
@@ -21,7 +23,7 @@ export default function landingPage () {
                         <br className="remove--tablet" />
                         individuals who barely have time to read,
                         <br className="remove--tablet" />
-                        and even people who dongit’t like to read.
+                        and even people who don’t like to read.
                     </div>
                     <button className="btn home__cta--btn" onClick={() => setAuthOpen(true)} >Login</button>
                     </div>
