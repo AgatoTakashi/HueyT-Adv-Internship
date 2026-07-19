@@ -6,7 +6,7 @@ import BookCard from "@/app/components/BookCard";
 export default function forYou () {
     return (
         <>
-            <div className="for-you flex flex-col">
+            <div className="for-you flex flex-col p-[32px]">
                 <SectionTitle title={"Selected just for you"} />
                 <div className="wrapper max-w-[681px]">
                     <a className="selected__book--card flex mb-[16] w-full p-[24px]">
