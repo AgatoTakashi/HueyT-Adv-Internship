@@ -12,6 +12,7 @@
 body {
   max-width: 100%;
   overflow-x: hidden;
+  color: #032b41;
 }
 
 img {
@@ -820,7 +821,7 @@ button:disabled {
    height: 24px;
 }
 
-.for-you {
+.for-you, .library, .settings {
   max-width: 1070px;
   margin: 0 auto;
 }
@@ -849,4 +850,8 @@ button:disabled {
 
 .selected__author {
   font-weight: 300;
+}
+
+.settings__title, .plan {
+  border-bottom: 1px solid #e1e7ea;
 }
