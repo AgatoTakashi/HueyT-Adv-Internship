@@ -819,3 +819,34 @@ button:disabled {
    width: 24px;
    height: 24px;
 }
+
+.for-you {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.selected__book--card {
+  background-color: #fbefd6;
+  border-radius: 3px;
+}
+
+.selected__book--left {
+  border-right: 1px solid #bac8ce;
+}
+
+.subTitle {
+  font-weight: 300;
+}
+
+.bookTitle {
+  font-weight: 700;
+}
+
+.controls svg {
+  width: 40px;
+  height: 40px;
+}
+
+.selected__author {
+  font-weight: 300;
+}
