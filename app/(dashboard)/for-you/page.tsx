@@ -20,11 +20,11 @@ export default function forYou () {
                                 </div>
                                 <div className="selected__books--column ml-[24px]">
                                     <div className="selected__books--text">
-                                        <h2 className="text-[16px] text-[#032b41] mb-[8px]" >The Lean Startup</h2>
+                                        <h2 className="text-[16px] mb-[8px]" >The Lean Startup</h2>
                                         <p className="selected__author mb-[16px]">Eric Ries</p>
                                         <div className="controls flex items-center">
                                             <FaCirclePlay/>
-                                            <p className="text-[14px] text-[#032b41] ml-[8px]">3 mins 23 secs</p>
+                                            <p className="text-[14px] ml-[8px]">3 mins 23 secs</p>
                                         </div>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@ export default function settings () {
     return (
         <>
             <div className="settings flex flex-col p-[32px]">
-                <h1 className="settings__title w-full text-[32px] text-[#032b41] pb-[16px] mb-[32px]">Settings</h1>
+                <h1 className="settings__title w-full text-[32px] pb-[16px] mb-[32px]">Settings</h1>
                 <div className="plan pb-[16px] mb-[32px]">
                     <SectionTitle title="Your subscription plan" />
                     <SectionSubTitle subTitle="premium" />
