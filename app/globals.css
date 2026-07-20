@@ -858,7 +858,7 @@ button:disabled {
   font-weight: 300;
 }
 
-.settings__title, .plan, .book__subtitle {
+.settings__title, .plan, .book__subtitle, .border-bottom {
   border-bottom: 1px solid #e1e7ea;
 }
 
@@ -881,10 +881,6 @@ button:disabled {
   height: 48;
   background: #032b41;
   border-radius: 5px;
-}
-
-.border-bottom {
-  border-bottom: 1px solid #e1e7ea;
 }
 
 .tag {
