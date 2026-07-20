@@ -15,10 +15,6 @@ body {
   color: #032b41;
 }
 
-img {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -887,4 +883,17 @@ button:disabled {
   border-radius: 5px;
   background: #f1f6f4;
   padding: 16px;
+}
+
+.bookCard {
+  margin: 0 auto;
+}
+
+.hover-green a {
+  margin-right: 20px;
+  padding: 28px 10px 28px 10px;
+}
+
+.hover-green a:hover {
+  background: #f1f6f4;
 }
