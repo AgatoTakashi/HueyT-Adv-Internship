@@ -23,7 +23,7 @@ export default function sideBar () {
     };
     
     return (
-        <div className="sidebar fixed">
+        <div className="sidebar w-[200px] flex-shrink-0">
             <div className="sidebar__wrapper flex flex-col justify-between h-screen">
                 <div className="sidebar__top">
                     <div className="logo__wrapper">

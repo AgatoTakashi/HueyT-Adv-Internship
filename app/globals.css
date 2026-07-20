@@ -24,6 +24,10 @@ a {
   color: inherit;
 }
 
+p {
+  line-height: 1.5;
+}
+
 ul {
   list-style: none;
 }
@@ -743,6 +747,7 @@ button:disabled {
 .sidebar {
   background: #f7faf9;
   width: 200px;
+  flex-shrink: 0;
 }
 
 .logo__wrapper {
@@ -780,7 +785,7 @@ button:disabled {
 
 .top__container {
   height: 80px;
-  border-bottom: 1px solid #e1e7ea
+  border-bottom: 1px solid #e1e7ea;
 }
 
 .search__wrapper {
@@ -821,9 +826,10 @@ button:disabled {
    height: 24px;
 }
 
-.for-you, .library, .settings {
+.for-you, .library, .settings, .book {
   max-width: 1070px;
   margin: 0 auto;
+  margin-top: 8px;
 }
 
 .selected__book--card {
@@ -852,6 +858,37 @@ button:disabled {
   font-weight: 300;
 }
 
-.settings__title, .plan {
+.settings__title, .plan, .book__subtitle {
   border-bottom: 1px solid #e1e7ea;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-light {
+  font-weight: 100 !important;
+}
+
+.book svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.book button {
+  width: 144;
+  height: 48;
+  background: #032b41;
+  border-radius: 5px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e1e7ea;
+}
+
+.tag {
+  border-radius: 5px;
+  background: #f1f6f4;
+  padding: 16px;
 }

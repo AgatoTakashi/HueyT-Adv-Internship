@@ -6,7 +6,7 @@ import BookCard from "@/app/components/BookCard";
 export default function library () {
     return (
         <>
-            <div className="library flex flex-col p-[32px]">
+            <div className="library flex flex-col p-[32px] mt-[8px]">
                 <SectionTitle title={"Saved Books"} />
                 <SectionSubTitle subTitle={"1 item"} />
                 <BookCard />
