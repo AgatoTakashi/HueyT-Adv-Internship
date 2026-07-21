@@ -3,7 +3,7 @@ import { AiOutlineStar } from "react-icons/ai";
 import { TfiTime } from "react-icons/tfi";
 import Image from "next/image";
 
-export default function BookCard({ bookData }) {
+export default function BookCard({ bookData }: { bookData: any}) {
     if (!bookData) return null;
   return (
     <Link className="relative" href={`/book/${bookData.id}`}>
