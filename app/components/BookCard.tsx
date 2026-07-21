@@ -6,9 +6,9 @@ import Image from "next/image";
 export default function BookCard({ bookData }) {
     if (!bookData) return null;
   return (
-    <Link href={`/book/${bookData.id}`}>
+    <Link className="relative" href={`/book/${bookData.id}`}>
       <div className="bookCard max-w-[175px] text-[14px] text-[#6b757b] mr-[40px] mb-[40px] mt-[40px]">
-        
+        {bookData.subscriptionRequired? <div className="book__pill absolute text-[10px]">Premium</div> : "" }
         <Image
           src={bookData.imageLink}
           width={172}
