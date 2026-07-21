@@ -1,6 +1,5 @@
 import SectionTitle from "@/app/components/SectionTitle";
 import SectionSubTitle from "@/app/components/SectionSubTitle";
-import BookCard from "@/app/components/BookCard";
 import SelectedBook from "@/app/components/SelectedBook";
 import RecommendedBooks from "@/app/components/RecommendedBooks";
 import SuggestedBooks from "@/app/components/SuggestedBooks";

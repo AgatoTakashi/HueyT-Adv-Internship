@@ -80,7 +80,7 @@ export default function AuthModal({ isOpen, onClose }) {
 
           {/* GUEST LOGIN */}
           <button className="btn guest__btn--wrapper" onClick={handleGuest}>
-            <figure className="google__icon--mask guest__icon--mask">
+            <figure className="guest__icon--mask">
               <FaUser />
             </figure>
             <div>Login as a Guest</div>

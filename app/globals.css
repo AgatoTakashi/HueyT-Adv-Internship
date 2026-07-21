@@ -609,10 +609,15 @@ button:disabled {
   justify-content: center;
   padding: 12px;
   border-radius: 8px;
-  background-color: #f1f6f4;
-  color: #032b41;
+  background-color: #4285f4;
+  color: white;
   font-weight: 600;
   transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.guest__btn--wrapper {
+  background-color: #3a579d;
 }
 
 .guest__btn--wrapper:hover,
@@ -628,6 +633,15 @@ button:disabled {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 1%;
+}
+
+.google__icon--mask {
+  background-color: white;
+  border-radius: 5px;
+  width: 34px;
+  height: 34px;
 }
 
 /* SEPARATOR */
