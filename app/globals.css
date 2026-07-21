@@ -897,3 +897,12 @@ button:disabled {
 .hover-green a:hover {
   background: #f1f6f4;
 }
+
+.book__pill {
+  top: 0;
+  right: 0;
+  border-radius: 500px;
+  background: #032b41;
+  color: white;
+  padding: 3px 8px;
+}
