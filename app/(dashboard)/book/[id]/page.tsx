@@ -21,7 +21,7 @@ export default async function Book ({ params }: BookPageProps) {
     return (
         <div className="book flex p-[32px] mt-[8px]">
             <div className="book__left w-3/4">
-                <h1 className="mb-[16px]">{book.title}e</h1>
+                <h1 className="mb-[16px]">{book.title}</h1>
                 <p className="font-bold mb-[16px]">{book.author}</p>
                 <p className="border-bottom mb-[16px] text-[20px] pb-[16px]">{book.subTitle}</p>
                 <div className="flex justify pb-[16px]">
