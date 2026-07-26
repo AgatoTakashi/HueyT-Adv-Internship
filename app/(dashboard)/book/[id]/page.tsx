@@ -13,11 +13,11 @@ interface BookPageProps {
 
 
 export default async function Book ({ params }: BookPageProps) {
-    const { id } = params;
+    const { id } = await params;
     const res = await fetch(
         `https://us-central1-summaristt.cloudfunctions.net/getBook?id=${id}`
     );
-    const raw = await res.json();
+    const raw = await res.text();
     if (!raw) {
         throw new Error("API returned empty response.");
     }
