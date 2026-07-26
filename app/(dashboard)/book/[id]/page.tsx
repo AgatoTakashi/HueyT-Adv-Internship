@@ -5,12 +5,19 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { FaRegBookmark } from "react-icons/fa";
 import Image from "next/image";
 
+interface BookPageProps {
+  params: {
+    id: string;
+  };
+}
+
+
 export default async function Book ({ params }: BookPageProps) {
-    const { id } = await params;
+    const { id } = params;
     const res = await fetch(
         `https://us-central1-summaristt.cloudfunctions.net/getBook?id=${id}`
     );
-    const raw = await res.text();
+    const raw = await res.json();
     if (!raw) {
         throw new Error("API returned empty response.");
     }
