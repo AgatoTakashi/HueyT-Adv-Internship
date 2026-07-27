@@ -79,6 +79,8 @@ export default function AuthModal({ isOpen, onClose }) {
           </div>
 
           {/* GUEST LOGIN */}
+
+        {isLogin && ( <>
           <button className="btn guest__btn--wrapper" onClick={handleGuest}>
             <figure className="guest__icon--mask">
               <FaUser />
@@ -86,10 +88,10 @@ export default function AuthModal({ isOpen, onClose }) {
             <div>Login as a Guest</div>
           </button>
 
-          {/* SEPARATOR */}
           <div className="auth__separator">
             <span className="auth__separator--text">or</span>
           </div>
+        </>)}
 
           {/* GOOGLE LOGIN */}
           <button className="btn google__btn--wrapper" onClick={handleGoogle}>

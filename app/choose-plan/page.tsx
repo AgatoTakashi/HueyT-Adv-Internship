@@ -132,7 +132,7 @@ export default function ChoosePlan() {
         <h1 className="text-center mt-[20px] mb-[30]">Choose the plan the fits you</h1>
 
         {/* Option 1 */}
-        <div className="option flex justify-between p-[24px] selected">
+        <div className="option flex justify-between p-[24px] selected mb-[16px]">
           <div className="circle-container w-1/10">
             <div className="circle">
               <div className="dot"></div>
@@ -145,14 +145,13 @@ export default function ChoosePlan() {
           </div>
         </div>
 
-        <div className="seperator flex items-center">
-          <div className="line h-[1px] w-[120px]"></div>
-          <p className="text-[#6b757b] p-[16px]">or</p>
-          <div className="line h-[1px] w-[120px]"></div>
-        </div>
+        {/* SEPARATOR */}
+          <div className="auth__separator">
+            <span className="auth__separator--text">or</span>
+          </div>
 
         {/* Option 2 */}
-        <div className="option flex justify-between p-[24px]">
+        <div className="option flex justify-between p-[24px] mt-[16px]">
           <div className="circle-container w-1/10">
             <div className="circle">
               <div className="dot"></div>
