@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth, googleProvider } from "../firebase/config";
 import {
   signInWithEmailAndPassword,
@@ -13,6 +13,12 @@ import googleIcon from '../assets/google.png'
 import { FaX } from "react-icons/fa6";
 
 export default function AuthModal({ isOpen, onClose, onSuccess }) {
+
+  useEffect(() => {
+    if (isOpen) {
+      setErrorMsg("");
+    }
+  }, [isOpen]);
 
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");

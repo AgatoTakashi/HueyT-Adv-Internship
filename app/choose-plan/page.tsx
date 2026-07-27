@@ -94,7 +94,10 @@ export default function ChoosePlan() {
       plan === "yearly" ? PRICE_ID_YEARLY : PRICE_ID_MONTHLY;
 
     const functions = getFunctions(app);
-    const createCheckoutSession = httpsCallable(functions, "createCheckoutSession");
+    const createCheckoutSession = httpsCallable<
+      { priceId: string },        // request type
+      { url: string }             // response type
+    >(functions, "createCheckoutSession");
 
     const { data } = await createCheckoutSession({ priceId });
 
