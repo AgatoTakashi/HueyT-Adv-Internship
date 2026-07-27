@@ -188,11 +188,11 @@ export default function ChoosePlan() {
           <div className="key__top flex justify-between">
             <SectionTitle title={"How does the free 7-day trial work?"} />
             <div className="arrow">
-              <MdKeyboardArrowDown className="icon-arrow transform transition-transform duration-300" />
+              <MdKeyboardArrowDown className="icon-arrow transform transition-transform duration-300 ease" />
             </div>
           </div>
           <div className="key__bottom hidden">
-            <SectionSubTitle subTitle="Begin your complimentary 7-day trial with a Summarist annual membership..." />
+            <SectionSubTitle subTitle="Begin your complimentary 7-day trial with a Summarist annual membership. You are under no obligation to continue your subscription, and you will only be billed when the trial period expires. With Premium access, you can learn at your own pace and as frequently as you desire, and you may terminate your subscription prior to the conclusion of the 7-day free trial." />
           </div>
         </div>
 
@@ -204,7 +204,7 @@ export default function ChoosePlan() {
             </div>
           </div>
           <div className="key__bottom hidden">
-            <SectionSubTitle subTitle="While an annual plan is active, it is not feasible to switch..." />
+            <SectionSubTitle subTitle="While an annual plan is active, it is not feasible to switch to a monthly plan. However, once the current month ends, transitioning from a monthly plan to an annual plan is an option." />
           </div>
         </div>
 
@@ -216,7 +216,7 @@ export default function ChoosePlan() {
             </div>
           </div>
           <div className="key__bottom hidden">
-            <SectionSubTitle subTitle="Premium membership provides you with the ultimate Summarist experience..." />
+            <SectionSubTitle subTitle="Premium membership provides you with the ultimate Summarist experience, including unrestricted entry to many best-selling books high-quality audio, the ability to download titles for offline reading, and the option to send your reads to your Kindle." />
           </div>
         </div>
 
@@ -228,7 +228,7 @@ export default function ChoosePlan() {
             </div>
           </div>
           <div className="key__bottom hidden">
-            <SectionSubTitle subTitle="You will not be charged if you cancel your trial before its conclusion..." />
+            <SectionSubTitle subTitle="You will not be charged if you cancel your trial before its conclusion. While you will not have complete access to the entire Summarist library, you can still expand your knowledge with one curated book per day." />
           </div>
         </div>
       </div>
