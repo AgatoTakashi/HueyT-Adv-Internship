@@ -7,10 +7,15 @@ import AuthModal from "./AuthModal"
 import { auth } from '../firebase/config'
 import { signOut } from 'firebase/auth'
 import useAuth from '../hooks/useAuth'
+import { useRouter } from 'next/navigation'
 
 export default function NavBar () {
     const [authOpen, setAuthOpen] = useState(false);
     const user = useAuth();
+    const router = useRouter();
+    const handleLoginSuccess = () => {
+        router.push("/for-you");
+    };
 
     const logout = async () => {
         await signOut(auth);
@@ -48,7 +53,7 @@ export default function NavBar () {
                 </div>
             </nav>
 
-            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
+            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} onSuccess={handleLoginSuccess} />
         </>
     )
 }

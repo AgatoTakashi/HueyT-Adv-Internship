@@ -73,7 +73,7 @@ export default function reviews () {
                 </div>
                 </div>
             </div>
-            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
+            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} onSuccess={""} />
             </section>
     )
 }

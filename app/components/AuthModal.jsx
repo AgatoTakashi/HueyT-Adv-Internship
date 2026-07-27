@@ -7,14 +7,12 @@ import {
   createUserWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import { useRouter } from "next/navigation";
 import { FaUser } from "react-icons/fa";
 import Image from "next/image";
 import googleIcon from '../assets/google.png'
 import { FaX } from "react-icons/fa6";
 
-export default function AuthModal({ isOpen, onClose }) {
-  const router = useRouter();
+export default function AuthModal({ isOpen, onClose, onSuccess }) {
 
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
@@ -36,7 +34,7 @@ export default function AuthModal({ isOpen, onClose }) {
       }
 
       onClose();
-      router.push("/for-you");
+      onSuccess();
     } catch (error) {
       setErrorMsg(error.message);
     }
@@ -49,7 +47,7 @@ export default function AuthModal({ isOpen, onClose }) {
     try {
       await signInWithPopup(auth, googleProvider);
       onClose();
-      router.push("/for-you");
+      onSuccess();
     } catch (error) {
       setErrorMsg(error.message);
     }
@@ -62,7 +60,7 @@ export default function AuthModal({ isOpen, onClose }) {
     try {
       await signInWithEmailAndPassword(auth, "guest@gmail.com", "guest123");
       onClose();
-      router.push("/for-you");
+      onSuccess();
     } catch (error) {
       setErrorMsg("Guest login is not configured.");
     }
