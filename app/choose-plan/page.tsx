@@ -19,7 +19,8 @@ export default function ChoosePlan() {
     keys.forEach((key) => {
       const top = key.querySelector<HTMLDivElement>(".key__top");
       const bottom = key.querySelector<HTMLDivElement>(".key__bottom");
-      const arrowIcon = key.querySelector<SVGElement>(".arrow svg");
+      const arrowIcon = key.querySelector(".icon-arrow");
+
 
       if (!top || !bottom || !arrowIcon) return;
 
