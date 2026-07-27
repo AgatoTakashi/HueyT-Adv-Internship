@@ -1,6 +1,6 @@
-import { onCall } from "firebase-functions/v2/https";
+import { onCall, CallableRequest } from "firebase-functions/v2/https";
 import { defineSecret } from "firebase-functions/params";
-import * as admin from "firebase-admin";
+import admin from "firebase-admin";
 import Stripe from "stripe";
 
 admin.initializeApp();
@@ -9,7 +9,7 @@ const STRIPE_SECRET = defineSecret("stripe_secret");
 
 export const createCheckoutSession = onCall(
   { secrets: [STRIPE_SECRET] },
-  async (request) => {
+  async (request: CallableRequest) => {
     const auth = request.auth;
     if (!auth) throw new Error("User must be logged in");
 
