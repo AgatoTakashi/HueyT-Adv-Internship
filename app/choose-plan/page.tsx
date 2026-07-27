@@ -9,8 +9,14 @@ import { FaHandshake } from "react-icons/fa";
 import SectionTitle from "../components/SectionTitle";
 import SectionSubTitle from "../components/SectionSubTitle";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { app } from "@/app/firebase/config";
 
 export default function ChoosePlan() {
+
+  const PRICE_ID_YEARLY = "price_1Txfei2OVMhobNG7vF4UgVIV";   // Premium Plus Yearly
+  const PRICE_ID_MONTHLY = "price_1Txfkc2OVMhobNG7HRqiVtxN"; // Premium Monthly
+
 
   // Accordion logic
   useEffect(() => {
@@ -71,10 +77,29 @@ export default function ChoosePlan() {
           trialButton.textContent = isYearly
             ? "Start your free 7-day trial"
             : "Start your first month";
+
+          trialButton.setAttribute("data-plan", isYearly ? "yearly" : "monthly");
         }
       });
     });
   }, []);
+
+  async function handleTrialClick() {
+    const trialButton = document.getElementById("trial-button");
+    if (!trialButton) return;
+
+    const plan = trialButton.getAttribute("data-plan") || "yearly";
+
+    const priceId =
+      plan === "yearly" ? PRICE_ID_YEARLY : PRICE_ID_MONTHLY;
+
+    const functions = getFunctions(app);
+    const createCheckoutSession = httpsCallable(functions, "createCheckoutSession");
+
+    const { data } = await createCheckoutSession({ priceId });
+
+    window.location.href = data.url;
+  }
 
   return (
     <div className="choose-plan w-full">
@@ -170,6 +195,7 @@ export default function ChoosePlan() {
         <button
           id="trial-button"
           className="plan-btn text-[16px] w-[300px] h-[40px] mb-[16px]"
+          onClick={handleTrialClick}
         >
           Start your free 7-day trial
         </button>
