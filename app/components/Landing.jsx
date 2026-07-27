@@ -1,12 +1,17 @@
-"use client"  //fix me
+"use client"
 
 import Image from "next/image";
 import landing from '../assets/landing.png'
 import AuthModal from "./AuthModal";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function landingPage () {
     const [authOpen, setAuthOpen] = useState(false);
+    const router = useRouter();
+    const handleLoginSuccess = () => {
+        router.push("/for-you");
+    };
 
     return (
         <section id="landing">
@@ -33,7 +38,7 @@ export default function landingPage () {
                 </div>
                 </div>
             </div>
-            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
+            <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} onSuccess={handleLoginSuccess} />
             </section>
     )
 }
