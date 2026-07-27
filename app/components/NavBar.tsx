@@ -7,7 +7,7 @@ import AuthModal from "./AuthModal"
 import { auth } from '../firebase/config'
 import { signOut } from 'firebase/auth'
 import useAuth from '../hooks/useAuth'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export default function NavBar () {
     const [authOpen, setAuthOpen] = useState(false);
