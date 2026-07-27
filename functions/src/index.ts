@@ -22,6 +22,9 @@ export const createCheckoutSession = onCall(
       mode: "subscription",
       payment_method_types: ["card"],
       customer_email: auth.token.email,
+      metadata: {
+            uid: auth.uid,
+        },
       line_items: [{ price: priceId, quantity: 1 }],
       success_url: "http://localhost:3000/settings",
       cancel_url: "http://localhost:3000/choose-plan",
