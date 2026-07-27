@@ -44,9 +44,25 @@ export const stripeWebhook = onRequest(
 
         let status = "basic";
 
-        if (subscription.status === "active") status = "premium";
-        if (subscription.status === "trialing") status = "premium-plus";
-        if (subscription.status === "canceled") status = "basic";
+        if (subscription.status === "active") {
+        // Yearly plan
+        if (subscription.items.data[0].price.recurring?.interval === "year") {
+            status = "premium-plus-yearly";
+        }
+
+        // Monthly plan
+        if (subscription.items.data[0].price.recurring?.interval === "month") {
+            status = "premium-plus-monthly";
+        }
+        }
+
+        if (subscription.status === "trialing") {
+        status = "premium-plus-yearly"; // your trial is yearly
+        }
+
+        if (subscription.status === "canceled") {
+        status = "basic";
+        }
 
         await userRef.set(
           {
